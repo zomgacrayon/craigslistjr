@@ -1,0 +1,12 @@
+<center><h1>Welcome to Craigslist!</h1></center>
+
+<div class="container">
+  <% @categories.each do |category| %>
+  <br><br>
+  <a href='/category/<%= category.id %>' ><%= category.name.capitalize %></a>
+
+  <% end %>
+</div>
+
+
+<center><a href='/new_post'>Create new Post </a></center>

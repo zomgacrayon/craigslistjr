@@ -1,0 +1,24 @@
+<center><h3><%= @post.title %></h3></center>
+
+<form action="/update_post/<%= @post.id %>" method="post">
+
+
+  <input name="_method" value="put" type="hidden"/>
+
+<!--   <input name="id" value="<%= @post.id %>" type="hidden"/> -->
+
+  <b>Title:</b> <input type="text" name="test[title]" value="<%= @post.title %>"> <br>
+  <b>Description:</b> <input type="text" name="test[description]" value="<%= @post.description %>"><br>
+  <b>Author:</b> <input type="text" name="test[author]" value="<%= @post.author %>"><br>
+  <b>Email:</b> <input type="text" name="test[email]" value="<%= @post.email %>"><br>
+  <b>Location:</b> <input type="text" name="test[location]" value="<%= @post.location %>"><br>
+  <b>Category:</b>
+  <select name='category_id'>
+    <% @categories.each do |category| %>
+      <option value='<%= category.id %>'><%= category.name %></option>
+    <% end %>
+  </select>
+  <br>
+
+  <input type="submit" value="Update post">
+</form>

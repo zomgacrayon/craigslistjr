@@ -1,0 +1,10 @@
+<center><h3> <%= @post.title %> </h3></center>
+
+<div class="container"></br>
+  <b>Description:</b> <%= @post.description %><br>
+  <b>Author:</b> <%= @post.author %><br>
+  <b>Email:</b> <%= @post.email %><br>
+  <b>Location:</b> <%= @post.location %>
+</div>
+
+<center><a href= "/edit_post/<%= @post.id %>"><input type="submit" value="Edit"></a></center>
